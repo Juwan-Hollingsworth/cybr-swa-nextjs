@@ -26,6 +26,23 @@ const PageMegaMenu = ({ className }: PageMegaMenuProps) => {
                     'w-full max-w-[200px] space-y-5',
                     index === 0 ? 'pr-4' : index === pageMegaMenuColumns.length - 1 ? 'px-4' : 'px-4',
                   )}>
+                  {/* Column Title and Subtitle */}
+                  {column.title && (
+                    <li className="pb-5">
+                      <div className="space-y-1">
+                        <h3 className="text-tagline-1 font-medium text-secondary dark:text-accent">
+                          {column.title}
+                        </h3>
+                        {column.subtitle && (
+                          <p className="text-tagline-3 text-secondary/60 dark:text-accent/60">
+                            {column.subtitle}
+                          </p>
+                        )}
+                      </div>
+                      {/* Horizontal divider */}
+                      <div className="mt-4 h-px w-full bg-secondary/10 dark:bg-accent/10"></div>
+                    </li>
+                  )}
                   {column.items.map((item) => (
                     <PageMegaMenuItem key={item.id} item={item} />
                   ))}
