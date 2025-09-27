@@ -14,6 +14,8 @@ export interface MegaMenuItem {
 
 export interface MegaMenuColumn {
   id: string;
+  title?: string;
+  subtitle?: string;
   items: MegaMenuItem[];
 }
 
@@ -142,8 +144,9 @@ export const homeMegaMenuColumns: MegaMenuColumn[] = [
 export const pageMegaMenuColumns: MegaMenuColumn[] = [
   {
     id: 'column-1',
+    title: 'Tutorial Page',
+    subtitle: 'Learning resources',
     items: [
-      { id: 'tutorial', label: 'Tutorial Page', href: '/tutorial' },
       { id: 'documentation', label: 'Documentation Page', href: '/documentation' },
       { id: 'faq', label: 'FAQ Page', href: '/faq' },
       { id: 'support', label: 'Support', href: '/support' },
@@ -157,8 +160,9 @@ export const pageMegaMenuColumns: MegaMenuColumn[] = [
   },
   {
     id: 'column-2',
+    title: 'Features Page 01',
+    subtitle: 'Product features',
     items: [
-      { id: 'features-1', label: 'Features Page 01', href: '/features-01' },
       { id: 'features-2', label: 'Features Page 02', href: '/features-02' },
       { id: 'integration-1', label: 'Integration Page 01', href: '/integration-01' },
       { id: 'integration-2', label: 'Integration Page 02', href: '/integration-02' },
@@ -172,8 +176,9 @@ export const pageMegaMenuColumns: MegaMenuColumn[] = [
   },
   {
     id: 'column-3',
+    title: 'Testimonials Page 01',
+    subtitle: 'Customer feedback',
     items: [
-      { id: 'testimonial-1', label: 'Testimonials Page 01', href: '/testimonial-01' },
       { id: 'testimonial-2', label: 'Testimonials Page 02', href: '/testimonial-02' },
       { id: 'case-study', label: 'Case Study Page', href: '/case-study' },
       {
@@ -191,8 +196,9 @@ export const pageMegaMenuColumns: MegaMenuColumn[] = [
   },
   {
     id: 'column-4',
+    title: 'Login Page 01',
+    subtitle: 'Authentication',
     items: [
-      { id: 'login-1', label: 'Login Page 01', href: '/login-01' },
       { id: 'login-2', label: 'Login Page 02', href: '/login-02' },
       { id: 'login-3', label: 'Login Page 03', href: '/login-03' },
       { id: 'login-4', label: 'Login Page 04', href: '/login-04' },
