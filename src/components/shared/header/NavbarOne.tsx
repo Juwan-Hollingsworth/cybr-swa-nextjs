@@ -8,10 +8,9 @@ import { cn } from '@/utils/cn';
 import { FC } from 'react';
 import MobileMenu from '../MobileMenu';
 import AboutMenu from '../mega-menu/AboutMenu';
-import BlogMenu from '../mega-menu/BlogMenu';
-import HomeMegaMenu from '../mega-menu/HomeMegaMenu';
-import PageMegaMenu from '../mega-menu/PageMegaMenu';
+import IndustriesMenu from '../mega-menu/IndustriesMenu';
 import ServicesMenu from '../mega-menu/ServicesMenu';
+import TechnologiesMenu from '../mega-menu/TechnologiesMenu';
 import Logo from './Logo';
 import MobileMenuButton from './MobileMenuButton';
 import NavCTAButton from './NavCTAButton';
@@ -43,16 +42,14 @@ const NavbarOne: FC<NavbarOneProps> = ({ className, megaMenuColor, btnClassName 
               {navigationItems.map((item) => {
                 const renderMegaMenu = () => {
                   switch (item?.megaMenuComponent) {
-                    case 'HomeMegaMenu':
-                      return <HomeMegaMenu className={megaMenuColor} />;
-                    case 'PageMegaMenu':
-                      return <PageMegaMenu className={megaMenuColor} />;
+                    case 'TechnologiesMenu':
+                      return <TechnologiesMenu className={megaMenuColor} />;
+                    case 'IndustriesMenu':
+                      return <IndustriesMenu className={megaMenuColor} />;
                     case 'AboutMenu':
                       return <AboutMenu className={megaMenuColor} />;
                     case 'ServicesMenu':
                       return <ServicesMenu className={megaMenuColor} />;
-                    case 'BlogMenu':
-                      return <BlogMenu className={megaMenuColor} />;
                     default:
                       return null;
                   }

@@ -1,13 +1,12 @@
-import { homeMegaMenuColumns } from '@/data/header';
+import { industriesMenuItems } from '@/data/header';
 import Link from 'next/link';
 import MobileMenuItem from './MobileMenuItem';
-const homepages = [...homeMegaMenuColumns[0].items, ...homeMegaMenuColumns[1].items, ...homeMegaMenuColumns[2].items];
 
-const HomeMenu = () => {
+const IndustriesMenu = () => {
   return (
-    <MobileMenuItem id="home" title="Home" hasSubmenu={true}>
+    <MobileMenuItem id="industries" title="Industries" hasSubmenu={true}>
       <ul>
-        {homepages.map((item) => (
+        {industriesMenuItems.map((item) => (
           <li key={item.id}>
             <Link
               href={item.href}
@@ -21,6 +20,5 @@ const HomeMenu = () => {
   );
 };
 
-HomeMenu.displayName = 'HomeMenu';
-
-export default HomeMenu;
+IndustriesMenu.displayName = 'IndustriesMenu';
+export default IndustriesMenu;

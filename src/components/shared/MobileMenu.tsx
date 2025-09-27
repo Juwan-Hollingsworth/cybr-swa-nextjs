@@ -8,9 +8,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import AboutUsMenu from './mobile-menu/AboutUsMenu';
-import BlogMenu from './mobile-menu/BlogMenu';
 import FeaturesMenu from './mobile-menu/FeaturesMenu';
 import HomeMenu from './mobile-menu/HomeMenu';
+import IndustriesMenu from './mobile-menu/IndustriesMenu';
 import IntegrationMenu from './mobile-menu/IntegrationMenu';
 import LoginMenu from './mobile-menu/LoginMenu';
 import PricingMenu from './mobile-menu/PricingMenu';
@@ -19,6 +19,7 @@ import ServicesMenu from './mobile-menu/ServicesMenu';
 import SignUpMenu from './mobile-menu/SignUpMenu';
 import TeamsMenu from './mobile-menu/TeamsMenu';
 import TestimonialMenu from './mobile-menu/TestimonialMenu';
+import TechnologiesMenu from './mobile-menu/TechnologiesMenu';
 
 const MobileMenu = () => {
   const { isOpen, closeMenu } = useMobileMenuContext();
@@ -65,11 +66,27 @@ const MobileMenu = () => {
         </div>
         <div className="scroll-bar h-[85vh] w-full overflow-x-hidden overflow-y-auto pb-10">
           <ul>
-            <HomeMenu />
+            <li>
+              <Link
+                href="/"
+                className="text-tagline-1 border-stroke-4 dark:border-stroke-6 block w-full border-b py-3 text-left font-normal transition-all duration-200 text-secondary/60 dark:text-accent/60">
+                Home
+              </Link>
+            </li>
+
+            <TechnologiesMenu />
+
+            <IndustriesMenu />
 
             <AboutUsMenu />
 
-            <BlogMenu />
+            <li>
+              <Link
+                href="/blog-01"
+                className="text-tagline-1 border-stroke-4 dark:border-stroke-6 block w-full border-b py-3 text-left font-normal transition-all duration-200 text-secondary/60 dark:text-accent/60">
+                Blog
+              </Link>
+            </li>
 
             <ServicesMenu />
 

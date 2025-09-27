@@ -1,12 +1,12 @@
-import { blogMenuItems } from '@/data/header';
+import { industriesMenuItems } from '@/data/header';
 import { cn } from '@/utils/cn';
 import MegaMenuItem from './MegaMenuItem';
 
-interface BlogMenuProps {
+interface IndustriesMenuProps {
   className?: string;
 }
 
-const BlogMenu = ({ className }: BlogMenuProps) => {
+const IndustriesMenu = ({ className }: IndustriesMenuProps) => {
   return (
     <div>
       <div className="fixed top-full left-1/2 z-50 hidden w-full max-w-[1290px] -translate-x-1/2 overflow-hidden rounded-[20px] bg-transparent py-6 transition-all duration-200 group-focus-within/nav:flex group-hover/nav:flex dark:bg-transparent"></div>
@@ -16,7 +16,7 @@ const BlogMenu = ({ className }: BlogMenuProps) => {
           className,
         )}>
         <ul className="w-full space-y-5">
-          {blogMenuItems.map((item) => (
+          {industriesMenuItems.map((item) => (
             <MegaMenuItem key={item.id} item={item} />
           ))}
         </ul>
@@ -25,4 +25,4 @@ const BlogMenu = ({ className }: BlogMenuProps) => {
   );
 };
 
-export default BlogMenu;
+export default IndustriesMenu;

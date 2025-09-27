@@ -23,16 +23,22 @@ export const navigationItems: NavigationItem[] = [
   {
     id: 'home',
     label: 'Home',
-    href: '#',
-    hasDropdown: true,
-    megaMenuComponent: 'HomeMegaMenu',
+    href: '/',
+    hasDropdown: false,
   },
   {
-    id: 'pages',
-    label: 'Solutions',
+    id: 'technologies',
+    label: 'Technologies',
     href: '#',
     hasDropdown: true,
-    megaMenuComponent: 'PageMegaMenu',
+    megaMenuComponent: 'TechnologiesMenu',
+  },
+  {
+    id: 'industries',
+    label: 'Industries',
+    href: '#',
+    hasDropdown: true,
+    megaMenuComponent: 'IndustriesMenu',
   },
   {
     id: 'about',
@@ -51,9 +57,8 @@ export const navigationItems: NavigationItem[] = [
   {
     id: 'blog',
     label: 'Blog',
-    href: '#',
-    hasDropdown: true,
-    megaMenuComponent: 'BlogMenu',
+    href: '/blog-01',
+    hasDropdown: false,
   },
   {
     id: 'contact',
@@ -61,6 +66,34 @@ export const navigationItems: NavigationItem[] = [
     href: '/contact-us',
     hasDropdown: false,
   },
+];
+
+// Technologies Menu Data
+export const technologiesMenuItems: MegaMenuItem[] = [
+  { id: 'react', label: 'React', href: '/technologies/react' },
+  { id: 'nextjs', label: 'Next.js', href: '/technologies/nextjs' },
+  { id: 'nodejs', label: 'Node.js', href: '/technologies/nodejs' },
+  { id: 'python', label: 'Python', href: '/technologies/python' },
+  { id: 'aws', label: 'AWS', href: '/technologies/aws' },
+  { id: 'docker', label: 'Docker', href: '/technologies/docker' },
+  { id: 'kubernetes', label: 'Kubernetes', href: '/technologies/kubernetes' },
+  { id: 'mongodb', label: 'MongoDB', href: '/technologies/mongodb' },
+  { id: 'postgresql', label: 'PostgreSQL', href: '/technologies/postgresql' },
+  { id: 'redis', label: 'Redis', href: '/technologies/redis' },
+];
+
+// Industries Menu Data
+export const industriesMenuItems: MegaMenuItem[] = [
+  { id: 'all-industries', label: 'All Industries', href: '/industries' },
+  { id: 'nonprofit-religious', label: 'Nonprofit & Religious', href: '/industries/nonprofit-religious' },
+  { id: 'healthcare', label: 'Healthcare', href: '/industries/healthcare' },
+  { id: 'insurance', label: 'Insurance', href: '/industries/insurance' },
+  { id: 'ecommerce', label: 'Ecommerce', href: '/industries/ecommerce' },
+  { id: 'credit-unions-banks-fintechs', label: 'Credit Unions, Banks, & Fintechs', href: '/industries/credit-unions-banks-fintechs' },
+  { id: 'startups', label: 'Startups', href: '/industries/startups' },
+  { id: 'manufacturing-logistics', label: 'Manufacturing & Logistics', href: '/industries/manufacturing-logistics' },
+  { id: 'small-businesses', label: 'Small Businesses', href: '/industries/small-businesses' },
+  { id: 'media-entertainment', label: 'Media & Entertainment', href: '/industries/media-entertainment' },
 ];
 
 // About Menu Data
