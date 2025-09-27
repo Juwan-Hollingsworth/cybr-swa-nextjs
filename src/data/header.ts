@@ -29,7 +29,7 @@ export const navigationItems: NavigationItem[] = [
   },
   {
     id: 'pages',
-    label: 'Pages',
+    label: 'Solutions',
     href: '#',
     hasDropdown: true,
     megaMenuComponent: 'PageMegaMenu',
